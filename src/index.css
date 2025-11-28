@@ -1,0 +1,44 @@
+@font-face {
+  font-family: doto;
+  src: url("../src/assets/fonts/Doto-Medium.ttf");
+}
+
+@font-face{
+  font-family: playfair;
+  src: url("../src/assets/fonts/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face{
+  font-family:lato;
+  src: url("../src/assets/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: helvetica;
+  src: url("../src/assets/fonts/Helvetica-Oblique.ttf");
+}
+
+/* Tailwind v4 setup: include preflight and utilities */
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme {
+  --color-primary: #E6CCFF;
+  --font-doto: doto, "sans-serif";
+  --font-playfair: playfair, "sans-serif";
+  --font-lato: lato, "sans-serif";
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.reset-tw:not(pre):not(code){
+  all:revert;
+}
+
