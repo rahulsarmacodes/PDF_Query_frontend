@@ -54,7 +54,7 @@ const Login = () => {
                 const response = await fetch(`${API_BASE}/auth/`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email, password }),
+                    body: JSON.stringify({ name, email,username: email, password }),
                 });
 
                 if (!response.ok) throw new Error("Registration failed");
