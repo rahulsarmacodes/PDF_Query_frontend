@@ -3,10 +3,10 @@ import { useAppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import GoogleIcon from '../assets/GoogleIcon';
 
-const API_BASE = import.meta.env.VITE_API_URL;
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 //const API_BASE = "http://localhost:8000";
 
-console.log("API URL:", import.meta.env.VITE_API_URL);//testing 
+console.log("API URL:", API_BASE_URL);//testing 
 
 const Login = () => {
     // local states for form handling
@@ -33,7 +33,7 @@ const Login = () => {
                 formData.append("username", email); // FastAPI expects username for OAuth2
                 formData.append("password", password);
 
-                const response = await fetch(`${API_BASE}/auth/token`, {
+                const response = await fetch(`${API_BASE_URL}/auth/token`, {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: formData.toString(),
@@ -54,7 +54,7 @@ const Login = () => {
             } else {
                 
                 // signup section
-                const response = await fetch(`${API_BASE}/auth/`, {
+                const response = await fetch(`${API_BASE_URL}/auth/`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name, email, password }),
