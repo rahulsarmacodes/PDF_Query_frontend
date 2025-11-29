@@ -30,7 +30,7 @@ const Login = () => {
                 formData.append("username", email); // FastAPI expects username for OAuth2
                 formData.append("password", password);
 
-                const response = await fetch(`{API_BASE}/auth/token`, {
+                const response = await fetch(`${API_BASE}/auth/token`, {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: formData.toString(),
