@@ -3,10 +3,11 @@ import { useAppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import GoogleIcon from '../assets/GoogleIcon';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL;
-//const API_BASE = "http://localhost:8000";
+//const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-console.log("API URL:", API_BASE_URL);//testing 
+const API_BASE_URL = "http://localhost:8000";
+
+console.log("API URL:", API_BASE_URL); //testing 
 
 const Login = () => {
     // local states for form handling
