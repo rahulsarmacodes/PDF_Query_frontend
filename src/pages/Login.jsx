@@ -16,6 +16,8 @@ const Login = () => {
     const { setUser, theme, setTheme, createNewChat } = useAppContext();
     const navigate = useNavigate();
 
+    //testing 
+    console.log("API URL:", import.meta.env.VITE_API_URL);
     // handle form submit for both login and register
     const handleSubmit = async (e) => {
         e.preventDefault();
