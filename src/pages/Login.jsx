@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import GoogleIcon from '../assets/GoogleIcon';
 
 const API_BASE = import.meta.env.VITE_API_URL;
+//const API_BASE = "http://localhost:8000";
+
+console.log("API URL:", import.meta.env.VITE_API_URL);//testing 
 
 const Login = () => {
     // local states for form handling
@@ -16,8 +19,8 @@ const Login = () => {
     const { setUser, theme, setTheme, createNewChat } = useAppContext();
     const navigate = useNavigate();
 
-    //testing 
-    console.log("API URL:", import.meta.env.VITE_API_URL);
+    
+
     // handle form submit for both login and register
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -54,7 +57,7 @@ const Login = () => {
                 const response = await fetch(`${API_BASE}/auth/`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email,username: email, password }),
+                    body: JSON.stringify({ name, email, password }),
                 });
 
                 if (!response.ok) throw new Error("Registration failed");
