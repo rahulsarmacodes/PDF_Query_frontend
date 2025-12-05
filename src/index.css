@@ -42,3 +42,30 @@
   all:revert;
 }
 
+.markdown-content-style h2 {
+    margin-top: 1.5rem; 
+    margin-bottom: 0.75rem;
+}
+
+.markdown-content-style p {
+    margin-bottom: 0.75rem;
+}
+
+.markdown-content-style ul, .markdown-content-style ol {
+    list-style-position: inside;
+    padding-left: 1.5rem; 
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content-style ul {
+    list-style-type: disc;
+}
+
+.markdown-content-style ol {
+    list-style-type: decimal;
+}
+
+.markdown-content-style li {
+    margin-bottom: 0.25rem;
+}

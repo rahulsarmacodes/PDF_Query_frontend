@@ -52,7 +52,7 @@ const Messages = ({ message }) => {
       {message.isImage ? (
         <img src={message.content} alt="" className='w-full max-w-md mt-2 rounded-md' />
       ) : (
-        <div className='text-sm dark:text-primary reset-tw'>
+        <div className='text-sm dark:text-primary reset-tw markdown-content-style'>
           <Markdown>{message.content}</Markdown>
         </div>
       )}
