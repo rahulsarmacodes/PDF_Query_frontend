@@ -7,7 +7,7 @@ const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className='font-lato relative dark:bg-gradient-to-b from-[#3e3b3b] to-[#000000] dark:text-white'>
+    <div className='font-lato relative min-h-[100svh] dark:bg-gradient-to-b from-[#3e3b3b] to-[#000000] dark:text-white overflow-hidden'>
       {!isMenuOpen && (
         <img
           src={assets.menu_icon}
@@ -17,7 +17,7 @@ const Home = () => {
         />
       )}
 
-      <div className='flex h-screen w-screen'>
+      <div className='flex min-h-[100svh] w-screen overflow-hidden'>
         <Sidebar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <ChatBox />
       </div>
