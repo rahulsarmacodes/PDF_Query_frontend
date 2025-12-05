@@ -166,7 +166,7 @@ const ChatBox = () => {
         {messages.length === 0 ? (
           <div className='flex flex-col justify-between items-center'>
             
-            <img src={ theme=== "dark" ? assets.PaperMind_logo_white : assets.PaperMind_logo} alt="Logo" className="w-50 mb-5" />
+            <img src={ theme=== "dark" ? assets.PaperMind_logo_white : assets.PaperMind_logo} alt="Logo" className="w-50 mt-15 mb-5" />
               <div className="h-full flex flex-col items-center justify-center text-center gap-3">
               <p className=" dark:text-slate-200 text-slate-700 text-4xl md:text-6xl font-bold tracking-tight font-lato ">Your PDFs, now interactive !</p>
               <span className=' md:text-6xl bg-clip-text font-bold text-transparent bg-[#149c7a] dark:bg-[#27E0B3] animate-pulse duration-2000 font-lato '>
