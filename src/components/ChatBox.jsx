@@ -143,8 +143,7 @@ const ChatBox = () => {
   }, [messages])
 
   return (
-    <div className="relative flex flex-col justify-between items-center h-screen w-full px-6 py-4 bg-[#e4e2e2] dark:bg-linear-to-b from-[#242124] to-[#000000] text-white">
-
+    <div className="relative flex flex-col justify-between items-center min-h-[100svh] w-full px-6 py-4 overflow-hidden bg-[#e4e2e2] dark:bg-linear-to-b from-[#242124] to-[#000000] text-white">
       {/* New Chat Button */}
       <div className="absolute top-5 right-5 z-10">
         <button

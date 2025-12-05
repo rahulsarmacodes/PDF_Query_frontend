@@ -13,12 +13,12 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
   const APP_VERSION = "v1.0.0"
 
   return (
-    <div
-      className={`fixed top-0 left-0 h-screen w-72 p-5 flex flex-col 
-      bg-[#d8f7f0] dark:bg-slate-800 text-black dark:text-white 
-      backdrop-blur-3xl transition-transform duration-500 z-20
-      ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
-    >
+      <div
+        className={`fixed top-0 left-0 min-h-[100svh] w-72 p-5 flex flex-col 
+        bg-[#d8f7f0] dark:bg-slate-800 text-black dark:text-white 
+        backdrop-blur-3xl transition-transform duration-500 z-20
+        ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+      >
       {/* Close Button */}
       <img
         onClick={() => setIsMenuOpen(false)}
